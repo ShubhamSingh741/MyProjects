@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Reverse Geocoding</title> 
+<style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+</style>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no"/> 
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/> 
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+<script type="text/javascript" src="geo.js"></script> 
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<link href="style.css" rel="stylesheet">
+
+</head> 
+<body onload="initialize()"> 
+<div id="first"><center><b>Fill Your Location</center>
+<form id="geolocation" action="personal.php" method="get">
+<label>Address   :</label>
+<input id="address" placeholder="Address" type="text" name="address"><br>
+<label>City   :</label>
+<input id="city" placeholder="City" type="text" name="city"><br>
+<label>State   :</label>
+<input id="state" placeholder="State" type="text" name="state"><br>
+<label>Country   :</label>
+<input id="country" placeholder="Country" type="text" name="country"><br>
+<label>Pincode   :</label>
+<input id="pincode" placeholder="Pincode" type="text" name="pincode"><br>
+<input id="latitude" type="hidden" name="latitude"><br>
+<input id="longitude" type="hidden" name="longitude"><br>
+<input id="submit" type="submit" value="Submit">
+</form>
+</div>
+<div id="map-canvas"></div>
+</body> 
+</html>
