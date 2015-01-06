@@ -1,0 +1,6 @@
+MyProjects
+==========
+
+Find the current location of the user using HTML5.
+From the location fetch the city,country,Pincode,latitude and longitude.
+Place these values in the form fields.
