@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Validation Page</title>
+  <script src="//code.jquery.com/jquery-1.6.4.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <link rel="stylesheet" type="text/css" href="FormCss.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="Validate_Js.js"></script>
+  </head>
+<body onload="drawCaptcha( 'txtCaptcha' );" oncontextmenu="return false">
+<form name="frmValidation" action="Validate_Success.html" method="POST" onsubmit="return submitCheck()" class="white-pink">
+<center>
+<h1>Validation Page <span>Please enter your Details</span></h1>
+</center>
+
+<label id="labelName">
+	<span>Name :</span>
+	<input type="text" name="txtName" id="name" title="name">
+</label><br>
+
+<label id="labelRadioButtons">
+	<span>Gender :</span>
+	<input type="radio" name="clickGender" id="clickGender" value="Male" checked="checked" title="male"> Male
+	<input type="radio" name="clickGender" id="clickGender2" value="Female" title="female"> Female
+</label><br>
+
+<label id="labelUserName"> 
+	<span>User Name :</span>
+ 	<input type="text" name="txtUname" id="uName" title="userName">
+</label><br>
+
+<label id="labelEmail">
+	<span>Email :</span>
+	<input type="text" name="txtEmail" id="email" title="email">
+</label><br>
+
+<label id="labelMobileNumber">
+	<span>Mobile Number :</span>
+	<input type="text" name="txtMobileNumber" id="mobileNumber" title="mobileNumber"/>
+</label><br>
+
+
+
+
+<label id="labelPassword">
+	<span>Password :</span> 
+	<input type="password" name="txtPassword" id="password" title="password">
+</label><br>
+
+<label id="labelConfirmPassword">
+	<span>Confirm Password:</span>
+	<input type="password" name="txtConfirmPassword" id="confirmPassword" title="confirmPassword">
+</label><br>
+
+<label id="labelAge">
+	<span>Age :</span>
+	<input type="text" name="txtAge" id="age" title="age">
+</label><br>
+
+<label id="labelDateOfBirth">
+	<span>Date Of Birth :</span>
+	<input type="text" name="txtDob" id="dob" title="dob"/>
+</label><br>
+
+
+<label id="labelFile">
+	<span>Upload File :</span>
+	<input type="file" name="uploadFile" id="upload" title="upload">
+</label><br>
+
+
+<label id="labelDropDown">
+	<span>Hobbies :</span>
+	<select id="hobbies" multiple="multiple" title="selectTag">
+		<option value="select" selected="selected">--Select--
+		<option value="Cricket">Cricket
+		<option value="Football">Football
+		<option value="Hockey">Hockey
+		<option value="Tennis">Tennis
+		<option value="Table Tennis">Table Tennis
+		<option value="Snooker">Snooker
+		<option value="Swimming">Swimming
+	</select>
+</label><br>
+
+<label id="labelIpAddress">
+	<span>Enter your IP Address :</span>
+	<input type="text" name="txtIpAddress" id="ipAddress" title="ipAddress"/>
+</label><br>
+
+<label id="labelUrl">
+	<span>URL :</span>
+	<input type="text" name="txtUrl" id="url" title="url"/>
+</label><br>
+
+<label id="labelCurrentDateMonth">
+	<span>Current Date :</span>
+	<input type="text" name="txtCurrentDateMonth" id="currentDateMonth" placeholder="(dd-mmm-yyyy) " title="currentDateMonth">
+</label><br>
+
+<label id="labelCurrentDateMDY">
+	<span>Current Date :</span>
+	<input type="text" name="txtCurrentDateMDY" id="currentDateMDY" placeholder="(mm-dd-yyyy) " title="currentDateMDY">
+</label><br>
+
+<label id="labelCurrentDateDMY">
+	<span>Current Date :</span>
+	<input type="text" name="txtCurrentDateDMY" id="currentDateDMY" placeholder="(dd-mm-yyyy) " title="currentDateDMY">
+</label><br>
+
+<label id="lblhomePhone">
+	<span>Home Phone Number ( India ) </span>
+	<input type="text" id="homePhone" name="homePhone" title="homePhone"/>
+</label><br>
+
+<label id="labelAddress">
+	<span>Address :</span>
+	<textarea rows="3" cols="200" id="address" name="txtAreaAddress" title="address">Enter Address</textarea>
+</label><br>
+
+<label id="labelPincode">
+	<span>Pincode :</span>
+	<input type="text" name="txtPincode" id="pincode" title="pincode"/>
+</label><br>
+
+<label id="labelCountry">
+	<span>Country :</span>
+	<input type="text" name="txtCountry" id="country" title="country"  />
+</label><br>
+
+
+<label id="labelSet">
+	<span>Step Demo :</span>
+	<input type="text" name="txtSet" id="step" title="step"/>
+</label><br>
+
+<label id="labelCreditCardNumber">
+	<span>Credit Card Number :</span>
+	<input type="text" name="txtCreditCardNumber" id="creditCardNumber" title="creditCardNumber"/>
+</label><br><br>
+
+<hr>
+
+<label id="readCaptcha">
+     <span>Captcha Validation</span>
+     </label>
+     <input  type="text" id="txtCaptcha" readonly class="input_img" title="captcha">
+     <div style="float: none; margin-left:120px; ">
+     <input type="text" id="txtInput" title="userInput"/>
+     </div>
+     <br>
+     
+     	<center>
+		<div>
+		<div style="float:left; margin-left: 120px;">
+	  	<input type="button" id="btnRefresh" value="Refresh" onclick="drawCaptcha( 'txtCaptcha' )"/>
+     	</div>
+     
+     	<div style="float:none; margin-right: 5px;">
+		<input id="captcha" type="button" value="Check"/>
+	 	</div>
+		<div style="clear: both">
+		</div>
+		</div>
+		</center>
+
+
+
+<hr>
+<br>
+<br>
+<br>
+
+
+<center>
+<div>
+	<div style="float:right; margin-left: 55px;">
+	<label id="labelSubmitButton">    	
+	<input type="submit" class="button" value="Submit Form"  style="text-align: center;font-size: 12px">
+	</label>  
+	</div>
+
+	<div style="float:none; margin-right: 55px;">
+	<label id="labelResetButton">
+	<input type="reset" name="reset" class="button" value="Reset" style="text-align: center;font-size: 12px">
+	</label>
+	</div>
+	<div style="clear: both">
+	</div>
+</div>
+</center>
+
+
+
+</form>
+
+
+<script>
+
+var myVal={change_uName_alert : "minLength('uName',6,'Not Meeting Minimum Length...Re-Enter...!!!'),maxLength('uName',20,'Length Exceeded...Re-Enter...!!!')"
+		,change_password_alert :"checkPassword( 'password', 'Invalid Password,Re-Enter...!!' ),length( 'password', 15, 6, 'Password not fulfilling all Criterias...Re-Enter...!!!' )"
+		,change_confirmPassword_alert : "matches( 'confirmPassword', 'Password doesnt match with the above password...Please Re-Enter...!!!' )"
+		,change_name_alert : "required( 'name', 'Mandatory to Enter..!!!' ),alphabets('name','Invalid Name....Re-Enter...!!!'),minLength('name',6,'Not Meeting Minimum Length criteria...Re-Enter...!!!')"
+		,change_email_dialog : "email('email','Not a valid Email Id...Re-Enter...!!!'),minLength('email',6,'Not Meeting Minimum Length criteria...Re-Enter...!!!')"
+		,change_age_alert : "validateAge('age',18,120,'Incorrect Age entered...Re-Enter...!!!'),maxLength('age',3,'Length Exceeded...Re-Enter...!!!')"	
+		,change_creditCardNumber_dialog : "checkCreditCardType( 'creditCardNumber', 'Invalid Card Number..Re-Enter...!!!' )"
+		,change_upload_alert : "checkFileSize('upload',2,'Maximum file size is restricted')"
+		,change_mobileNumber_alert : "checkMobileNumber('mobileNumber','Invalid Mobile Number..Re-Enter...!!!')"
+		,click_clickGender : "checkRadio( 'clickGender', 'Select atleast one')"
+		,change_url_tooltip : "checkUrl('url','Url is not valid..Re-Enter..!!!')"
+		,change_currentDateMonth_dialog : "dateWithMonth('currentDateMonth','Wrong Input Date..Re-Enter..!!')"
+		,change_currentDateMDY_alert : "dateMMDDYYYY('currentDateMDY','Wrong Input Date..Re-Enter..!!')"
+		,change_currentDateDMY_alert : "dateDDMMYYYY('currentDateDMY','Wrong Input Date..Re-Enter..!!')"
+		,click_hobbies : "checkSelected( 'hobbies', 'Select atleast one')"
+		,change_ipAddress_dialog : "ipAddress('ipAddress','Invalid IPAddress..Re-Enter...!!!')"
+		,change_address_dialog : "notEmpty('address','Invalid address entered....Re-Enter...!!!'),alphaNumericSymbols('address','Invalid address entered....Re-Enter...!!!')"
+		,change_pincode_dialog : "pincode('pincode',6,'Invalid Pincode Entered....Re-Enter...!!!')"
+		,change_country_alert : "whitelist('India,China,Japan'),country('country', 'Unaccepted Value')"		
+		,click_captcha_alert : "checkCaptcha( 'txtCaptcha', 'txtInput' )"
+		,change_dob_dialog : "dateOfBirth( 'dob', 'Invalid Syntax...Re-Enter..!!!' )"
+		,change_homePhone_dialog : "checkLandline( 'homePhone', 'Please Enter Indian Phone Number..!!')"
+		,change_step_alert : "stepInput( 'step',3, 'Please enter the number or multiple accordingly..!!')"	
+};
+init_validations(myVal);
+</script>
+</body>
+</html>
+
